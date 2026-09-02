@@ -6,11 +6,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[900],
-      body: const Center(
-        child: Text(
-          'My Card',
-          style: TextStyle(color: Colors.white, fontSize: 24),
+      body: Container(
+        width: double.infinity,
+        color: Colors.blue,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              radius: 30.0,
+              backgroundColor: Colors.white,
+              child: Icon(Icons.person, size: 40.0, color: Colors.blue),
+            ),
+          ],
         ),
       ),
     );
