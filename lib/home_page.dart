@@ -30,6 +30,12 @@ class HomePage extends StatelessWidget {
               'Flutter Developer',
               style: TextStyle(color: Colors.white54, letterSpacing: 4.0),
             ),
+            const Divider(
+              thickness: 1.0,
+              color: Colors.white24,
+              indent: 100.0,
+              endIndent: 100.0,
+            ),
           ],
         ),
       ),
