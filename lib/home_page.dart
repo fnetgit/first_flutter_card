@@ -7,13 +7,18 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final cardWidth = screenWidth < 600
+        ? screenWidth
+        : (screenWidth * 0.45).clamp(400.0, 600.0);
+
     return Scaffold(
       body: Container(
         width: double.infinity,
         color: Colors.blue,
         child: Center(
           child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 400.0),
+            constraints: BoxConstraints(maxWidth: cardWidth),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
