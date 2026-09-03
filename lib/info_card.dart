@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class InfoCard extends StatelessWidget {
-  final IconData icon;
+  final Widget icon;
   final String data;
 
   const InfoCard({required this.icon, required this.data, super.key});
@@ -18,7 +18,7 @@ class InfoCard extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Icon(icon, color: Colors.blue),
+          icon,
           const SizedBox(width: 16.0),
           Text(
             data,
