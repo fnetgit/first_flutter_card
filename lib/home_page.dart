@@ -8,9 +8,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
+
     final cardWidth = screenWidth < 600
         ? screenWidth
         : (screenWidth * 0.45).clamp(400.0, 600.0);
+
+    final scale = screenWidth < 600 ? 1.0 : (cardWidth / 400.0).clamp(1.0, 1.4);
 
     return Scaffold(
       body: Container(
@@ -23,22 +26,26 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  radius: 30.0,
+                  radius: 40.0 * scale,
                   backgroundImage: AssetImage('assets/images/profile.jpeg'),
                 ),
-                const SizedBox(height: 16.0),
-                const Text(
+                SizedBox(height: 16.0 * scale),
+                Text(
                   'Francisco Neto',
                   style: TextStyle(
                     fontFamily: 'Pacifico',
-                    fontSize: 24.0,
+                    fontSize: 24.0 * scale,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                 ),
-                const Text(
+                Text(
                   'Flutter Developer',
-                  style: TextStyle(color: Colors.white54, letterSpacing: 4.0),
+                  style: TextStyle(
+                    fontSize: 14.0 * scale,
+                    color: Colors.white54,
+                    letterSpacing: 4.0,
+                  ),
                 ),
                 const Divider(
                   thickness: 1.0,
