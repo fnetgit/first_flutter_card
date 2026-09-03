@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './info_card.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -36,6 +38,8 @@ class HomePage extends StatelessWidget {
               indent: 100.0,
               endIndent: 100.0,
             ),
+            const InfoCard(icon: Icons.code, data: 'fnetgit'),
+            const InfoCard(icon: Icons.email, data: 'netofrancisco.pro@gmail.com'),
           ],
         ),
       ),
