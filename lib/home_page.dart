@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        color: Colors.blue,
+        color: Theme.of(context).colorScheme.primary,
         child: Center(
           child: ConstrainedBox(
             constraints: BoxConstraints(maxWidth: cardWidth),
@@ -56,14 +56,23 @@ class HomePage extends StatelessWidget {
                   endIndent: 100.0,
                 ),
                 InfoCard(
-                  icon: const FaIcon(FontAwesomeIcons.github, color: Colors.blue),
+                  icon: FaIcon(
+                    FontAwesomeIcons.github,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
                   data: 'fnetgit',
-                  onTap: () => launchUrl(Uri.parse('https://github.com/fnetgit')),
+                  onTap: () =>
+                      launchUrl(Uri.parse('https://github.com/fnetgit')),
                 ),
                 InfoCard(
-                  icon: const Icon(Icons.email, color: Colors.blue),
+                  icon: Icon(
+                    Icons.email,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
                   data: 'netofrancisco.pro@gmail.com',
-                  onTap: () => launchUrl(Uri.parse('mailto:netofrancisco.pro@gmail.com')),
+                  onTap: () => launchUrl(
+                    Uri.parse('mailto:netofrancisco.pro@gmail.com'),
+                  ),
                 ),
               ],
             ),
