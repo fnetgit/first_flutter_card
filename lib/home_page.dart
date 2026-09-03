@@ -16,13 +16,13 @@ class HomePage extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 30.0,
-              backgroundColor: Colors.white,
-              child: Icon(Icons.person, size: 40.0, color: Colors.blue),
+              backgroundImage: AssetImage('assets/images/profile.jpeg'),
             ),
             const SizedBox(height: 16.0),
             const Text(
               'Francisco Neto',
               style: TextStyle(
+                fontFamily: 'Pacifico',
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
@@ -39,7 +39,10 @@ class HomePage extends StatelessWidget {
               endIndent: 100.0,
             ),
             const InfoCard(icon: Icons.code, data: 'fnetgit'),
-            const InfoCard(icon: Icons.email, data: 'netofrancisco.pro@gmail.com'),
+            const InfoCard(
+              icon: Icons.email,
+              data: 'netofrancisco.pro@gmail.com',
+            ),
           ],
         ),
       ),
