@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import './info_card.dart';
 
@@ -54,13 +55,15 @@ class HomePage extends StatelessWidget {
                   indent: 100.0,
                   endIndent: 100.0,
                 ),
-                const InfoCard(
-                  icon: FaIcon(FontAwesomeIcons.github, color: Colors.blue),
+                InfoCard(
+                  icon: const FaIcon(FontAwesomeIcons.github, color: Colors.blue),
                   data: 'fnetgit',
+                  onTap: () => launchUrl(Uri.parse('https://github.com/fnetgit')),
                 ),
-                const InfoCard(
-                  icon: Icon(Icons.email, color: Colors.blue),
+                InfoCard(
+                  icon: const Icon(Icons.email, color: Colors.blue),
                   data: 'netofrancisco.pro@gmail.com',
+                  onTap: () => launchUrl(Uri.parse('mailto:netofrancisco.pro@gmail.com')),
                 ),
               ],
             ),
