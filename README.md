@@ -1,17 +1,25 @@
-# first_flutter
+# First Flutter Card
 
-A new Flutter project.
+This project is a simple profile card that displays basic information about me. It serves as an introductory project to learn Flutter's layout concepts, widgets, and basic styling.
+
+## Features
+
+- Simple and responsive UI
+- Personal profile card
+- Built with Flutter
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To run this project locally, ensure you have Flutter installed.
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+# Clone the repository
+git clone https://github.com/fnetgit/first_flutter_card.git
+cd first_flutter_card
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+# Get dependencies
+flutter pub get
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Run the app
+flutter run
+```
